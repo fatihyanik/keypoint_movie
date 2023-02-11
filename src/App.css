@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+
+
+.line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*Kaç Stırda sınırlamak istiyorsanız */
+  -webkit-box-orient: vertical; 
+  overflow:hidden;
+}
+

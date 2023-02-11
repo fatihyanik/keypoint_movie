@@ -1,0 +1,13 @@
+.all-movies {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .movie-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /*Kaç Stırda sınırlamak istiyorsanız */
+    -webkit-box-orient: vertical; 
+    overflow:hidden;
+  }
