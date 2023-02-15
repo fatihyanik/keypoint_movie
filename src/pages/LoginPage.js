@@ -27,24 +27,22 @@ const LoginPage = ({ isLogged, setIsLogged }) => {
     const email = "keypoint@gmail.com";
     const password = "123456";
 
-
-
     const result =
       email === values?.email && password === values?.password
         ? true
         : false;
     result && localStorage.setItem("token", JSON.stringify({ email: "keypoint@gmail.com", password: "123456" }));
-    console.log(result);
+   // console.log(result);
     setIsLogged(result);
   };
-  console.log(isLogged);
+ // console.log(isLogged);
 
   useEffect(() => {
     loginControl();
   }, [isLogged]);
 
   return (
-    <body className="login-body">
+    <div className="login-body">
       <div className="login">
         <h1 className="text-center">Login Form</h1>
         <form onSubmit={handleSubmit}>
@@ -59,7 +57,6 @@ const LoginPage = ({ isLogged, setIsLogged }) => {
               required
             />
             <div className="message">
-
               {errors.email}
             </div>
           </div>
@@ -80,7 +77,7 @@ const LoginPage = ({ isLogged, setIsLogged }) => {
           <button type="submit" className="btn btn-success w-100">Login</button>
         </form>
       </div>
-    </body>
+    </div>
 
   );
 };

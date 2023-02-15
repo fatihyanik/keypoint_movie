@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import App from "../App";
+import {useParams } from "react-router-dom";
+
 
 function MoviePage() {
   const [movie, setMovie] = useState({});
@@ -19,21 +19,23 @@ function MoviePage() {
     findMovie();
   }, [params]);
 
-  console.log(movie);
+  //console.log(movie);
 
   return (
+    <>
     <div className="container d-flex justify-content-center align-items-center ">
-      <div class="card bg-success text-white p-4" style={{ width: "33rem" }}>
-        <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{movie.original_title}</h5>
-          <p class="card-text ">
+      <div className="card bg-success text-white p-4" style={{ width: "33rem" }}>
+        <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{movie.original_title}</h5>
+          <p className="card-text ">
             {movie.overview}
           </p>
         </div>
       </div>
 
     </div>
+    </>
 
   );
 }

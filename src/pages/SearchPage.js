@@ -4,16 +4,18 @@ import SearchForm from "../components/SearchForm";
 
 const SearchPage = ({ logOut }) => {
 
-    const [query,setQuery] = useState("");
+  const [query, setQuery] = useState("");
 
 
 
   return (
-    <div className="d-flex justify-content-center align-items-center flex-column">
-      <SearchForm logOut={logOut} setQuery={setQuery} />
+    <>
+      <div className="d-flex justify-content-center align-items-center flex-column">
+        <SearchForm logOut={logOut} setQuery={setQuery} />
 
-      <AllMovies query={query} />
-    </div>
+        <AllMovies query={query} />
+      </div>
+    </>
   );
 };
 

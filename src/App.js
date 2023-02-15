@@ -7,8 +7,6 @@ function App() {
 
   const [isLogged, setIsLogged] = useState(null)
 
-
-
   const logInControl = () => {
     localStorage.getItem("token") ? setIsLogged(true) : setIsLogged(null);
   };
@@ -27,7 +25,7 @@ function App() {
     logOut();
   });
 
-  console.log(isLogged);
+  //console.log(isLogged);
 
   return (
     <div className="App">{isLogged ? <SearchPage logOut={logOut} /> : <LoginPage isLogged={isLogged} setIsLogged={setIsLogged} />}</div>
